@@ -8,7 +8,12 @@
 
     <script>
         function twoToThePowerOf(form) {
-            alert("Complete Javascript, and disable this alert.");
+            //1. Input - Read in the single value
+           let power = parseInt(form.powerValue.value);
+            //2. Processing - 2^ that value
+           let answer = Math.pow(2, power);
+            //3. Output - The answer
+            document.getElementById("powerResult").innerHTML = answer;
         }
     </script>
 </head>
