@@ -7,7 +7,26 @@
     <link rel="stylesheet" href="mainSite.css">
     <script>
         function randomNumberGenerator(nums) {
-            alert("Complete Javascript, and disable this alert.");
+            //defining variables
+            let randomNumbers = [];
+            let numberDetails = {
+                sum : 0,
+                product : 1
+            }
+
+            //Generate random numbers & store in randomNumbers
+            for (let loopCounter = 0; loopCounter <nums; loopCounter++) {
+                randomNumbers.push(Math.random() * 100);
+            }
+            //Loop to calculate the sum and product
+            for (let loopCounter = 0; loopCounter <nums; loopCounter++) {
+                //get sum, add on to randomNumbers[loopCounter]
+                //get product, add on to randomNumbers[loopCounter]
+                numberDetails["sum"] = numberDetails["sum"] + randomNumbers[loopCounter];
+                numberDetails["product"] = numberDetails["product"] * randomNumbers[loopCounter];
+            }
+            //output the sum and product
+            document.getElementById("randomNumbersOutput").innerHTML = numberDetails["sum"] + "<br>"+numberDetails["product"];
         }
     </script>
     <style>
